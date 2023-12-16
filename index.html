@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactly - Contact Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contactly - Contact Management System</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add New Contact</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+
+                <button type="button" onclick="addContact()">Add Contact</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Search Contacts</h2>
+            <input type="text" id="searchInput" placeholder="Search contacts..." oninput="searchContacts()">
+        </section>
+
+        <section>
+            <h2>Contact List</h2>
+            <ul id="contactList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
