@@ -119,3 +119,13 @@ function generateId() {
 
 // Initial display of contacts
 displayContacts();
+
+function showAllContacts() {
+    
+    const allContacts = [
+        { id: 1, name: "John Doe", email: "jooss@gmail.com", phone: "123-456-7890" },
+        // Add more contacts as needed
+    ];
+
+    displayContacts(allContacts);
+}
