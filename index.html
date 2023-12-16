@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactly - Contact Management System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="address-book.svg">
+    
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -16,26 +20,35 @@
             <h2>Add New Contact</h2>
             <form id="contactForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name_id" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email_id" required>
 
                 <label for="phone">Phone:</label>
-                <input type="tel" id="phone" required>
+                <input type="tel" id="phone_id" required>
 
-                <button type="button">Add Contact</button>
+                <button type="button" id="btn_id" onclick="addContact()" >Add Contact</button>
             </form>
         </section>
 
         <section>
             <h2>Search Contacts</h2>
-            <input type="text" id="searchInput" placeholder="Search contacts...">
+            <input type="text" id="searchInputId" placeholder="Search contacts..." oninput="searchContacts()">
         </section>
 
         <section>
             <h2>Contact List</h2>
-            <ul id="contactList"></ul>
+            <ul id="contactListId">
+                <li>
+                    <span>John Doe - jooss@gmail.com - 123-456-7890</span>
+                    <div class="contact-actions">
+                        <button onclick="editContact(1)">Edit</button>
+                        <button onclick="deleteContact(1)">Delete</button>
+                    </div>
+                </li>
+                
+            </ul>
         </section>
     </main>
 
