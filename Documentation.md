@@ -1,5 +1,7 @@
 # Contactly - Documentation
 
+
+![Alt text](<Project Page.png>)
 ## Functionality
 
 ### 1. Add New Contact
@@ -9,8 +11,10 @@
 - Fill in the required fields: Name, Email, and Phone.
 - Click the "Add Contact" button to add the new contact to the list.
 
+
 ### 2. View Contacts
 
+![Alt text](<Contact Form.png>)
 - All contacts are displayed in the "Contact List" section.
 - Contacts include details such as name, email, and phone number.
 - Each contact has "Edit" and "Delete" buttons for interaction.

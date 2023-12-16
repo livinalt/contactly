@@ -1,4 +1,4 @@
-// process
+// process thoughts
 // 
 
 // creating the array of contacts with five names
@@ -117,15 +117,36 @@ function generateId() {
     return Math.max(...contacts.map(contact => contact.id), 0) + 1;
 }
 
-// Initial display of contacts
 displayContacts();
 
 function showAllContacts() {
     
     const allContacts = [
-        { id: 1, name: "John Doe", email: "jooss@gmail.com", phone: "123-456-7890" },
-        // Add more contacts as needed
+        { id: 1, name: "James Boss", email: "james.boss@gmail.com", phone: "123-456-7890" },
+    { id: 2, name: "Oga Mayor", email: "oga.mayor@gmail.com", phone: "567-644-3333" },
+    { id: 3, name: "General Sugar", email: "general.sugar@gmail.com", phone: "555-000-4567" },
+    { id: 4, name: "John Frontend", email: "john.frontend@gmail.com", phone: "234-111-0000" },
+    { id: 5, name: "Sule Ibrahim", email: "sule.ibrahim@gmail.com", phone: "234-252-3890" }
+        
     ];
 
     displayContacts(allContacts);
 }
+
+function displayContacts(contacts) {
+    const contactList = document.getElementById('contactListId');
+    contactList.innerHTML = '';
+
+    contacts.forEach(contact => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+        <span>" + contact.name + " - " + contact.email + " - " + contact.phone + "</span>
+            <div class="contact-actions">
+                <button onclick="editContact(${contact.id})">Edit</button>
+                <button onclick="deleteContact(${contact.id})">Delete</button>
+            </div>
+        `;
+        contactList.appendChild(listItem);
+    });
+}
+
